@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white shadow-xl rounded-2xl w-full max-w-md p-8">
+        <h1 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">✨ To-Do List</h1>
+
+        <!-- Input field to add new tasks -->
+        <form class="flex items-center justify-center  mb-6" id="todoForm">
+            <input type="text" id="taskInput" placeholder="Add a new task..."
+                class="flex-grow p-3 border border-gray-300 rounded-l-lg focus:outline-purple-400 shadow-sm text-gray-700">
+            <input type="submit" value="Submit" onsubmit="addTask()" onclick="addTask()"
+                class="bg-purple-600 text-white px-5 py-3 rounded-r-lg hover:bg-purple-700 focus:outline-purple-400 shadow-lg">
+        </form>
+
+        <!-- Unordered list to display the tasks -->
+        <ul class="todo-list space-y-4" id="todoList">
+            <!-- Tasks will be appended here -->
+        </ul>
+    </div>
+    <script>
+        // prevent default behaviour
+        document.getElementById('todoForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+        })
+        // add task
+        function addTask() {
+            let taskInput = document.getElementById('taskInput').value;
+            //check if input is valid
+            if (taskInput && taskInput !== ' ') {
+                let todoList = document.getElementById('todoList');
+                // create list element 
+                let elem = document.createElement('li');
+                elem.className = "flex items-center justify-between p-4 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200";
+                // add text 
+                let taskText = document.createElement('span');
+                taskText.textContent = taskInput;
+                taskText.className = "w-3/4";
+                elem.appendChild(taskText);
+                // creating buttons' field 
+                let btnField = document.createElement('span')
+                btnField.className = "w-1/4";
+                elem.appendChild(btnField);
+                // edit button 
+                let editBtn = document.createElement('button');
+                editBtn.textContent = "🖊";
+                editBtn.className = "mx-2";
+                btnField.appendChild(editBtn);
+                editBtn.onclick = () => {
+                    newTaskText = prompt("Enter new task: ", taskText.textContent)
+                    if (newTaskText) {
+                        taskText.textContent = newTaskText;
+                    }
+                }
+                // remove button 
+                let removeBtn = document.createElement('button');
+                removeBtn.textContent = "❌";
+                removeBtn.className = "mx-2";
+                btnField.appendChild(removeBtn);
+                removeBtn.onclick = function () {
+                    todoList.removeChild(elem)
+                };
+
+                // add task to list
+                todoList.append(elem);
+                // empty the input field 
+                document.getElementById('taskInput').value = '';
+            } else {
+
+            }
+
+        }
+        // edit task 
+        let editBtn = document.createElement('button');
+        // remove task 
+        function remTask() {
+            let removeBtn = document.createElement('button');
+        }
+    </script>
+
+</body>
+
+</html>
