@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Form Validation</title>
+
+    <script type="application/javascript">
+        function checkForm() {
+            // create references to get data
+            let username = document.getElementById('name');
+            let email_address = document.getElementById('email_address');
+
+            // check username field if empty
+            if (username.value == "") {
+                alert("Please enter your name");
+                username.focus();
+                return false;
+            }
+            // check email field if empty
+            if (email_address.value == "") {
+                alert("Please enter your email address");
+                email_address.focus();
+                return false;
+            }
+            // if all is well return true
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form" onsubmit="return checkForm()">
+        <h2 class="color-blue-500">Enter your details.</h2>
+        <label for="name">Username:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="email_address">Email Address:</label>
+        <input type="email" id="email_address" name="email_address">
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+</body>
+
+</html>

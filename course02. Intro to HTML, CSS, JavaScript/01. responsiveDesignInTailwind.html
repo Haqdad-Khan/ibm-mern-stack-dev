@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header bg-red-500 p-4">Header</header>
+    <nav class="Navbar bg-blue-500 p-4">Navbar</nav>
+    <div>
+        <div class="flex flex-col sm:flex-row">
+            <aside class="aside bg-yellow-500 w-full p-4">Aside</aside>
+            <section style="color: yellow;" id="mainSection" class="mainSection w-full p-4">Main Section</section>
+            <article class="article bg-green-300 w-full p-4">Article</article>
+        </div>
+    </div>
+    <footer class="footer bg-blue-500 p-4">Footer</footer>
+</body>
+<script>
+    // retrieving elements 
+    let setColor = document.getElementsByClassName('header');
+    console.log("retrieved element:", setColor);
+
+    // creating elements 
+    window.onload(addPara());
+
+    function addPara() {
+        let newPara = document.createElement("p");
+        let newText = document.createTextNode("I am created Para.")
+
+        newPara.appendChild(newText)
+        document.body.appendChild(newPara)
+    }
+
+    // designing elements
+    function styleElem() {
+        let elem = document.getElementById("mainSection");
+        console.log(styleElem)
+
+        elem.style.color = "red";
+    }
+    document.write(styleElem)
+
+    // function Car(make, model, year) {
+    //     this.make = make;
+    //     this.model = model;
+    //     this.year = year;
+
+    //     this.getName = function () {
+    //         return this.make + " " + this.model + " " + this.year;
+    //     }
+    // }
+
+    // let c = new Car("Toyota", "GLI", 2020);
+    // alert(c.getName())
+</script>
+
+</html>
