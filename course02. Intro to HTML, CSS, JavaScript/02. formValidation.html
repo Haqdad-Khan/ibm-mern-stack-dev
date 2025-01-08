@@ -5,43 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Form Validation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <form id="form" class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full space-y-6">
+        <h2 class="text-2xl font-bold text-gray-800 text-center">Enter your details</h2>
+        <div class="space-y-2">
+            <label for="name" class="block text-sm font-medium text-gray-600">Username</label>
+            <input type="text" id="name" name="name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Enter your name">
+        </div>
+        <div class="space-y-2">
+            <label for="email_address" class="block text-sm font-medium text-gray-600">Email Address</label>
+            <input type="email" id="email_address" name="email_address"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Enter your email address">
+        </div>
+        <div class="flex space-x-4">
+            <input type="submit" value="Submit"
+                class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer">
+            <input type="reset" value="Reset"
+                class="w-full bg-gray-200 text-gray-700 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer">
+        </div>
+    </form>
 
     <script type="application/javascript">
-        function checkForm() {
-            // create references to get data
-            let username = document.getElementById('name');
-            let email_address = document.getElementById('email_address');
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                checkForm();
+            });
+        });
 
-            // check username field if empty
-            if (username.value == "") {
+        function checkForm() {
+            // Create references to get data
+            let username = document.getElementById('name').value;
+            let email_address = document.getElementById('email_address').value;
+
+            // Check username field if empty
+            if (username.trim() === "") {
                 alert("Please enter your name");
-                username.focus();
+                document.getElementById('name').focus();
                 return false;
             }
-            // check email field if empty
-            if (email_address.value == "") {
+            // Check email field if empty
+            if (email_address.trim() === "") {
                 alert("Please enter your email address");
-                email_address.focus();
+                document.getElementById('email_address').focus();
                 return false;
             }
-            // if all is well return true
+
+            // Printing details
+            let body = document.querySelector('body');
+            let printArea = document.createElement('div');
+            printArea.className = "bg-red-500 text-white p-4 mt-4 rounded shadow-md";
+            printArea.textContent = `Name: ${username}, Email: ${email_address}`;
+            body.appendChild(printArea);
+
+            // Emptying fields
+            let dataName = document.getElementById('name').value = "";
+            let dataEmail = document.getElementById('email_address').value = "";
+            function emptyFields(dataName, dataEmail) {
+                dataName.value = "";
+                dataEmail.value = "";
+            }
+            document.getElementById('name').focus();
+            // If all is well, return true
             return true;
         }
     </script>
-</head>
-
-<body>
-    <form id="form" onsubmit="return checkForm()">
-        <h2 class="color-blue-500">Enter your details.</h2>
-        <label for="name">Username:</label>
-        <input type="text" id="name" name="name">
-        <br><br>
-        <label for="email_address">Email Address:</label>
-        <input type="email" id="email_address" name="email_address">
-        <br><br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-    </form>
 
 </body>
 
