@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <!-- Main Container -->
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
+        <form id="form">
+            <h1 class="text-2xl font-bold text-center text-blue-600 mb-6">Simple Interest Calculator</h1>
+
+            <!-- Amount Input -->
+            <div class="mb-4">
+                <label for="principal" class="block text-gray-700 font-semibold">Amount</label>
+                <input type="number" id="principal"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 "
+                    placeholder="Enter principal amount">
+            </div>
+
+            <!-- Rate Input -->
+            <div class="mb-4">
+                <label for="rate" class="block text-gray-700 font-semibold">Rate</label>
+                <div class="flex items-center">
+                    <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25" class="w-full">
+                    <span id="rate_val" class="ml-4 text-blue-600 font-bold">10.25</span>%
+                </div>
+            </div>
+
+            <!-- Years Input -->
+            <div class="mb-4">
+                <label for="years" class="block text-gray-700 font-semibold">No. of Years</label>
+                <input type="number" id="years" list="all_years"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 "
+                    placeholder="Select or enter years">
+                <datalist id="all_years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+            </div>
+
+            <!-- Interest Result -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold">Interest</label>
+                <span id="result" class="block mt-1 text-lg text-blue-600 font-bold">-</span>
+            </div>
+
+            <!-- Compute Button -->
+            <button onclick="compute()"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Compute Interest</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-6 text-center">
+        <p class="text-gray-600">&#169;2025 - <span id="year"></span>, Made by <a class="text-blue-600 underline"
+                href="https://github.com/haqdad-khan">Haqdad Khan</a>
+        </p>
+    </footer>
+
+    <script>
+        // prevent default behaviour
+        document.getElementById('form').addEventListener('submit', (e) => {
+            e.preventDefault()
+        })
+
+        // dynamic time 
+        document.getElementById('year').textContent = new Date().getFullYear()
+        // Update the rate display dynamically
+        let rateInput = document.getElementById('rate');
+        let rateVal = document.getElementById('rate_val');
+
+        rateInput.addEventListener('input', () => {
+            rateVal.textContent = rateInput.value;
+        });
+
+        // compute interest 
+        function compute() {
+            let principal = parseFloat(document.getElementById('principal').value);
+            let rate = parseFloat(document.getElementById('rate').value);
+            let years = parseInt(document.getElementById('years').value);
+
+            if (isNaN(principal) || isNaN(rate) || isNaN(years) || principal <= 0 || years <= 0) {
+                document.getElementById('result').textContent = "Invalid Input";
+                return;
+            }
+            const interest = (principal * rate * years) / 100;
+            document.getElementById('result').textContent = interest.toFixed(2);
+        }
+
+
+
+        // const rateInput = document.getElementById('rate');
+        // const rateVal = document.getElementById('rate_val');
+
+        // rateInput.addEventListener('input', () => {
+        //     rateVal.textContent = rateInput.value;
+        // });
+
+        // // Compute the interest
+        // function compute() {
+        //     const principal = parseFloat(document.getElementById('principal').value);
+        //     const rate = parseFloat(document.getElementById('rate').value);
+        //     const years = parseInt(document.getElementById('years').value);
+
+        //     if (isNaN(principal) || isNaN(rate) || isNaN(years) || principal <= 0 || years <= 0) {
+        //         document.getElementById('result').textContent = "Invalid input";
+        //         return;
+        //     }
+
+        //     const interest = (principal * rate * years) / 100;
+        //     document.getElementById('result').textContent = interest.toFixed(2);
+        // }
+    </script>
+</body>
+
+</html>

@@ -30,8 +30,16 @@
                 class="w-full bg-gray-200 text-gray-700 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer">
         </div>
     </form>
+    <footer class="mt-6 text-center">
+        <p>&#169;2025 - <span id="year"></span>, Made by <a class="text-blue-800 underline"
+                href="https://github.com/haqdad-khan">Haqdad Khan</a></p>
+    </footer>
 
     <script type="application/javascript">
+        // dynamic time 
+        document.getElementById('year').textContent = new Date().getFullYear()
+
+        // prevent default behaviour 
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('form').addEventListener('submit', (e) => {
                 e.preventDefault();
