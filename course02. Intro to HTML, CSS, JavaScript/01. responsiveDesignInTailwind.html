@@ -4,60 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Layout</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <title>Enhanced Layout</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <header class="header bg-red-500 p-4">Header</header>
-    <nav class="Navbar bg-blue-500 p-4">Navbar</nav>
-    <div>
-        <div class="flex flex-col sm:flex-row">
-            <aside class="aside bg-yellow-500 w-full p-4">Aside</aside>
-            <section style="color: yellow;" id="mainSection" class="mainSection w-full p-4">Main Section</section>
-            <article class="article bg-green-300 w-full p-4">Article</article>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-red-600 text-white p-6 shadow-md">
+        <h1 class="text-xl font-bold text-center">Welcome to My Website</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#" class="hover:underline">About</a></li>
+            <li><a href="#" class="hover:underline">Services</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto my-8">
+        <div class="flex flex-col sm:flex-row gap-4">
+            <!-- Aside -->
+            <aside class="bg-yellow-400 p-6 rounded-lg shadow-md sm:w-1/4">
+                <h2 class="text-lg font-semibold">Sidebar</h2>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#" class="hover:text-yellow-700">Link 1</a></li>
+                    <li><a href="#" class="hover:text-yellow-700">Link 2</a></li>
+                    <li><a href="#" class="hover:text-yellow-700">Link 3</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Section -->
+            <section id="mainSection" class="bg-white p-6 rounded-lg shadow-md flex-1">
+                <h2 class="text-lg font-semibold text-yellow-600">Main Section</h2>
+                <p class="mt-4">This is the main section where content goes. It’s styled to grab attention.</p>
+            </section>
+
+            <!-- Article -->
+            <article class="bg-green-300 p-6 rounded-lg shadow-md sm:w-1/4">
+                <h2 class="text-lg font-semibold">Article</h2>
+                <p class="mt-4">This is an article section for additional content or updates.</p>
+            </article>
         </div>
     </div>
-    <footer class="footer bg-blue-500 p-4">Footer</footer>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white p-6 text-center shadow-md">
+        <p>&copy; <span id="year"></span>Made by
+            <a href="https://github.com/haqdad-khan" class="underline">Haqdad Khan</a>.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <script>
+        // dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
-<script>
-    // retrieving elements 
-    let setColor = document.getElementsByClassName('header');
-    console.log("retrieved element:", setColor);
-
-    // creating elements 
-    window.onload(addPara());
-
-    function addPara() {
-        let newPara = document.createElement("p");
-        let newText = document.createTextNode("I am created Para.")
-
-        newPara.appendChild(newText)
-        document.body.appendChild(newPara)
-    }
-
-    // designing elements
-    function styleElem() {
-        let elem = document.getElementById("mainSection");
-        console.log(styleElem)
-
-        elem.style.color = "red";
-    }
-    document.write(styleElem)
-
-    // function Car(make, model, year) {
-    //     this.make = make;
-    //     this.model = model;
-    //     this.year = year;
-
-    //     this.getName = function () {
-    //         return this.make + " " + this.model + " " + this.year;
-    //     }
-    // }
-
-    // let c = new Car("Toyota", "GLI", 2020);
-    // alert(c.getName())
-</script>
 
 </html>
