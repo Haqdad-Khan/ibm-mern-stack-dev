@@ -1,6 +1,14 @@
 // dynamic time 
 document.getElementById('year').textContent = new Date().getFullYear()
 
+// nav toggler 
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
 // add recommendation section 
 // Select the form and the container where new cards will be added
 const recommendationForm = document.querySelector('form');
@@ -34,7 +42,16 @@ recommendationForm.addEventListener('submit', function (event) {
 
     // Add the new card to the recommendations section
     recommendationsContainer.appendChild(newCard);
-
+    showPopup(true)
     // Clear the form inputs
     recommendationForm.reset();
 });
+
+// show pop up
+function showPopup(bool) {
+    if (bool) {
+        document.getElementById('popup').style.visibility = 'visible'
+    } else {
+        document.getElementById('popup').style.visibility = 'hidden'
+    }
+}

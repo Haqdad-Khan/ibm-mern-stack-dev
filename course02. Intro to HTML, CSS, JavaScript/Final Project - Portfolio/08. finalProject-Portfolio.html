@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Haqdad Khan</title>
+    <title>Haqdad Khan - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -15,19 +15,63 @@
     html {
         scroll-behavior: smooth;
     }
+
+    /* Form Pop-up */
+
+    .popup {
+        width: 400px;
+        background-color: #e8bcf0;
+        border-radius: 3mm;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        position: fixed;
+        /* padding: 30px; */
+        visibility: hidden;
+    }
+
+    .popup img {
+        padding-top: 20px;
+    }
+
+    .popup button {
+        background-color: #fff;
+        border: 1px solid #7600bc;
+        color: #7600bc;
+        display: block;
+        border-radius: 6px;
+        text-align: center;
+        margin: 50px;
+        padding: 10px;
+        width: 2in;
+        font-size: 20px;
+        margin-left: 25%;
+    }
+
+    .popup button:hover {
+        background-color: #fff;
+        border: 2px solid #7600bc;
+        color: #7600bc;
+        display: block;
+        font-weight: bolder;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 25%;
+    }
 </style>
 
 <body class="bg-[#f9fafc]">
     <!-- Navbar -->
     <header id="header">
-        <nav class="sticky bg-purple-700 text-white py-4 px-6">
+        <nav class="bg-purple-700 text-white py-4 px-8">
             <div class="container mx-auto flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold">Haqdad</a>
+                <a href="#" class="text-3xl font-bold">Haqdad Khan</a>
                 <ul class="hidden md:flex space-x-6">
-                    <li><a href="#about" class="hover:underline">About Me</a></li>
-                    <li><a href="#skills" class="hover:underline">Skills</a></li>
-                    <li><a href="#projects" class="hover:underline">Projects</a></li>
-                    <li><a href="#recommendations" class="hover:underline">Recommendations</a></li>
+                    <li><a href="#about" class="hover:font-bold hover:underline">About Me</a></li>
+                    <li><a href="#skills" class="hover:font-bold hover:underline">Skills</a></li>
+                    <li><a href="#projects" class="hover:font-bold hover:underline">Projects</a></li>
+                    <li><a href="#recommendations" class="hover:font-bold hover:underline">Recommendations</a></li>
                 </ul>
                 <button class="md:hidden text-white" id="menu-toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -37,20 +81,21 @@
                 </button>
             </div>
             <ul class="hidden flex-col space-y-4 p-4 md:hidden" id="mobile-menu">
-                <li><a href="#about" class="block hover:underline">About Me</a></li>
-                <li><a href="#skills" class="block hover:underline">Skills</a></li>
-                <li><a href="#projects" class="block hover:underline">Projects</a></li>
-                <li><a href="#recommendations" class="block hover:underline">Recommendations</a></li>
+                <li><a href="#about" class="block hover:font-bold hover:underline">About Me</a></li>
+                <li><a href="#skills" class="block hover:font-bold hover:underline">Skills</a></li>
+                <li><a href="#projects" class="block hover:font-bold hover:underline">Projects</a></li>
+                <li><a href="#recommendations" class="block hover:font-bold hover:underline">Recommendations</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero -->
-    <section id="about" class="flex flex-col md:flex-row text-black py-10 px-6">
+    <section id="about" class="flex flex-col items-center md:flex-row text-black px-4 py-10">
         <!-- Image Section -->
         <div class="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
             <figure class="max-w-xs md:max-w-sm lg:max-w-md">
-                <img src="./src/img/Hero.png" alt="Jane Doe" class="rounded-lg shadow-lg">
+                <img src="./src/img/Hero.png" alt="Haqdad Khan"
+                    class="hover:shadow-lg hover:shadow-indigo-500 transition ease-in-out duration-700 rounded-lg shadow-lg">
             </figure>
         </div>
 
@@ -59,20 +104,19 @@
             <h1 class="text-4xl lg:text-5xl font-extrabold leading-snug text-[#7e22cd]">Hi, I'm Haqdad Khan! <span
                     class="wave">👋</span></h1>
             <p class="mt-4 text-base lg:text-lg leading-relaxed text-[#333]">
-                I am a full-stack developer with 2 years of experience in both application and presentation layers. I
-                have worked on applications and microservices deployed on IBM Cloud. I am an avid user of IBM Watson
-                Services. I have worked on Watson Assistant, NLU, and Sentiment Analyzer, to name a few.
+                I am a Front-End Developer with 1 Years+ of experience in frondend designing and development. I have
+                worked on different frontend applications and deployed on <strong><a
+                        href="https://github.com/haqdad-khan" target="_blank">GitHub</a></strong> and
+                <strong>Vercel</strong>. I am an avid user of vercel and github.
             </p>
 
             <!-- Contact Details Section -->
             <div class="mt-6 text-lg text-[#444]">
                 <p class="flex items-center">
-                    <!-- Phone Icon -->
                     <i class="fa-solid fa-square-phone mr-2" style="color: #7e22cd;"></i>
                     <a href="tel:+923184917470" class="text-[#7e22cd] hover:text-gray-600">+92 318 4917470</a>
                 </p>
                 <p class="mt-2 flex items-center">
-                    <!-- Email Icon -->
                     <i class="fa-solid fa-square-envelope mr-3" style="color: #7e22cd;"></i>
                     <a href="mailto:hk.borikhelvi@gmail.com"
                         class="text-[#7e22cd] hover:text-gray-600">hk.borikhelvi@gmail.com</a>
@@ -80,133 +124,147 @@
             </div>
         </div>
     </section>
+
     <!-- Skills Section -->
     <section id="skills" class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-purple-600 text-center mb-8">Skills</h1>
+        <h1 class="text-4xl font-bold text-left text-purple-600 mb-8">Skills</h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
             <!-- Skill Card -->
-            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+            <div
+                class="hover:-translate-y-1 transition ease-in-out bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
                     class="w-16 h-16 mb-4">
                 <h2 class="text-xl font-semibold text-gray-800">HTML</h2>
-                <p class="text-gray-600 mt-2">2 years experience</p>
+                <p class="text-gray-600 mt-2">2+ years experience</p>
             </div>
 
             <!-- Skill Card -->
-            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript" class="w-16 h-16 mb-4">
-                <h2 class="text-xl font-semibold text-gray-800">JavaScript</h2>
-                <p class="text-gray-600 mt-2">1.5 years experience</p>
-            </div>
-
-            <!-- Skill Card -->
-            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
-                    class="w-16 h-16 mb-4">
-                <h2 class="text-xl font-semibold text-gray-800">Java</h2>
-                <p class="text-gray-600 mt-2">0.5 years experience</p>
-            </div>
-
-            <!-- Skill Card -->
-            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-                    class="w-16 h-16 mb-4">
-                <h2 class="text-xl font-semibold text-gray-800">React</h2>
-                <p class="text-gray-600 mt-2">1 year experience</p>
-            </div>
-
-            <!-- Skill Card -->
-            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
-                    class="w-16 h-16 mb-4">
-                <h2 class="text-xl font-semibold text-gray-800">Node.js</h2>
-                <p class="text-gray-600 mt-2">1 year experience</p>
-            </div>
-
-            <!-- Skill Card -->
-            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+            <div
+                class="hover:-translate-y-1 transition ease-in-out bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
                     class="w-16 h-16 mb-4">
                 <h2 class="text-xl font-semibold text-gray-800">CSS</h2>
-                <p class="text-gray-600 mt-2">2 years experience</p>
+                <p class="text-gray-600 mt-2">2+ years experience</p>
             </div>
+
+            <!-- Skill Card for Bootstrap -->
+            <div
+                class="hover:-translate-y-1 transition ease-in-out bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                    alt="Bootstrap" class="w-16 h-16 mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">Bootstrap</h2>
+                <p class="text-gray-600 mt-2">1+ years experience</p>
+            </div>
+
+            <!-- Skill Card for Tailwind CSS -->
+            <div
+                class="hover:-translate-y-1 transition ease-in-out bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                    alt="Tailwind CSS" class="w-16 h-16 mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">Tailwind CSS</h2>
+                <p class="text-gray-600 mt-2">0.5 year experience</p>
+            </div>
+
+            <!-- Skill Card -->
+            <div
+                class="hover:-translate-y-1 transition ease-in-out bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript" class="w-16 h-16 mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">JavaScript</h2>
+                <p class="text-gray-600 mt-2">1+ years experience</p>
+            </div>
+
+            <!-- Skill Card -->
+            <div
+                class="hover:-translate-y-1 transition ease-in-out bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                    class="w-16 h-16 mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">React</h2>
+                <p class="text-gray-600 mt-2">0.5 year experience</p>
+            </div>
+
+            <!-- Skill Card -->
+            <div
+                class="hover:-translate-y-1 transition ease-in-out bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+                    class="w-16 h-16 mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">Node.js</h2>
+                <p class="text-gray-600 mt-2">0.5 year experience</p>
+            </div>
+
 
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-10 px-4">
-        <h2 class="text-center text-3xl font-bold text-purple-800 mb-6">Projects</h2>
+    <section id="projects" class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+        <h2 class="text-4xl font-bold text-left text-purple-600 mb-8">Projects</h2>
         <div class="max-w-4xl mx-auto space-y-6">
             <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">
-                <h3 class="text-2xl font-semibold text-purple-600 mb-2">Chatbot</h3>
+                <h3 class="text-2xl font-semibold text-purple-600 mb-2">AI-Powered Customer Support</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Developed a secure website integrated with a chatbot for an automobile client.</li>
-                    <li>Utilized HTML, CSS, JavaScript, and IBM Watson Assistant for development.</li>
-                    <li>Ensured secure and smooth user interaction through an intelligent chatbot.</li>
+                    <li>Built an AI-based support system for online services.</li>
+                    <li>Used machine learning and NLP for automated responses.</li>
+                    <li>Improved accuracy through continuous data training.</li>
                 </ul>
             </div>
             <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">
-                <h3 class="text-2xl font-semibold text-purple-600 mb-2">Sentiment Analyzer</h3>
+                <h3 class="text-2xl font-semibold text-purple-600 mb-2">Product Review Analyzer</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Developed and deployed a sentiment analyzer for the box reviews section.</li>
-                    <li>Used IBM NLU to analyze customer sentiments for eCommerce products.</li>
-                    <li>Integrated sentiment analysis into the platform for better customer feedback analysis.</li>
+                    <li>Developed an app to analyze eCommerce product reviews.</li>
+                    <li>Used NLP to classify sentiments as positive, negative, or neutral.</li>
+                    <li>Visualized feedback trends in an intuitive dashboard.</li>
                 </ul>
             </div>
             <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">
-                <h3 class="text-2xl font-semibold text-purple-600 mb-2">Fashion Website</h3>
+                <h3 class="text-2xl font-semibold text-purple-600 mb-2">Tech Blog Platform</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Created a styled multi-page website for a new player in the fashion industry.</li>
-                    <li>Integrated a shopping cart with Stripe payment gateway for seamless purchases.</li>
-                    <li>Designed the website with a focus on modern aesthetics and user experience.</li>
+                    <li>Created a platform for sharing tech articles.</li>
+                    <li>Added features like authentication, comments, and Markdown support.</li>
+                    <li>Optimized for SEO and mobile responsiveness.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-
     <!-- Recommendations Section -->
     <section id="recommendations" class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <h1 class="text-4xl font-bold text-purple-600 text-center mb-8">Recommendations</h1>
-
+        <h1 class="text-4xl font-bold text-purple-600 text-left mb-8">Recommendations</h1>
         <!-- Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Card 1 -->
             <div class="bg-white shadow-md border border-gray-300 rounded-lg p-6">
                 <p class="text-gray-700 italic">
-                    “Jane is a very quick learner and quickly grasps key concepts of Web development. She got a great
-                    attitude & she is an excellent team player. She takes initiative within a team and has potential to
-                    lead.”
+                    “Haqdad’s technical expertise and attention to detail were pivotal in delivering a high-quality
+                    product. She communicates effectively and consistently meets deadlines.”
                 </p>
-                <p class="text-right text-gray-700 mt-4">- <strong>John Doe</strong></p>
+                <p class="text-right text-gray-700 mt-4">- <strong>Sarah Lee</strong></p>
             </div>
 
             <!-- Card 2 -->
             <div class="bg-white shadow-md border border-gray-300 rounded-lg p-6">
                 <p class="text-gray-700 italic">
-                    “Working with Jane has been an awesome experience. She is highly knowledgeable and goes the extra
-                    step to ensure everything is right. I would definitely want to work with her again.”
+                    “I have collaborated with Haqdad on multiple projects, and her dedication to delivering exceptional
+                    results is unmatched. She is a reliable and skilled professional.”
                 </p>
-                <p class="text-right text-gray-700 mt-4">- <strong>Emily Smith</strong></p>
+                <p class="text-right text-gray-700 mt-4">- <strong>David Williams</strong></p>
             </div>
 
             <!-- Card 3 -->
             <div class="bg-white shadow-md border border-gray-300 rounded-lg p-6">
                 <p class="text-gray-700 italic">
-                    “I had worked with Jane during the initial phase of our venture, which needed Web development. She
-                    is a committed resource and will be an asset to any organization!”
+                    “Haqdad is a highly efficient developer who always brings fresh ideas to the table. Her ability to
+                    problem-solve and adapt to changing requirements has been a huge asset to our team.”
                 </p>
-                <p class="text-right text-gray-700 mt-4">- <strong>Michael Johnson</strong></p>
+                <p class="text-right text-gray-700 mt-4">- <strong>Chris Adams</strong></p>
             </div>
         </div>
 
         <!-- Leave a Recommendation Section -->
         <div class="mt-12">
             <h2 class="text-2xl font-semibold text-gray-800 text-center mb-4">Leave a Recommendation</h2>
-            <form class="bg-white shadow-md border-2 border-purple-500 rounded-lg p-6 space-y-4 max-w-3xl mx-auto">
+            <form
+                class="bg-white shadow-md border-2 border-purple-500 animate-pulse rounded-lg p-6 space-y-4 max-w-3xl mx-auto">
                 <div>
                     <label for="name" class="block text-gray-700 font-medium">Name (Optional)</label>
                     <input id="name" type="text"
@@ -224,31 +282,32 @@
                 </div>
             </form>
         </div>
+        <!-- Scroll to Top Button -->
+        <div class="flex flex-row-reverse">
+            <a href="#header"
+                class="animate-bounce bg-purple-600 text-white p-3 rounded-full shadow-lg border-2 border-purple-700 hover:bg-purple-700">
+                ↑
+            </a>
+        </div>
     </section>
 
+    <div class="popup" id="popup" class="flex_center">
+        <!-- <i class="fa-solid fa-circle-check" style="color: #B197FC; font-size: 50px;"></i> -->
+        <i class="fa-solid fa-circle-check text-6xl mt-6" style="color: #B197FC;"></i>
 
-    <!-- Scroll to Top Button -->
-    <a href="#header"
-        class="fixed bottom-8 right-8 bg-purple-600 text-white p-3 rounded-full shadow-lg border-2 border-purple-700 hover:bg-purple-700">
-        ↑
-    </a>
+        <h3>Thanks for leaving your Recommendation!</h3>
+        <button onclick="showPopup(false)">Ok</button>
+    </div>
 
     <!-- Footer -->
     <footer class="mt-6 text-center p-4">
-        <p class="text-gray-600">&#169;2025 - <span id="year"></span> , Made by <a class="text-purple-600 underline"
-                href="https://github.com/haqdad-khan">Haqdad Khan</a>
+        <p class="text-gray-600">&#169;2025 - <span id="year"></span>, Made by <a class="text-purple-600 underline"
+                href="https://github.com/haqdad-khan" target="_blank">Haqdad Khan</a>
         </p>
     </footer>
+
+    <!-- javascript -->
     <script src="script.js"></script>
-
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 
 </html>
