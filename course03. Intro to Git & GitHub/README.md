@@ -1,6 +1,6 @@
+# Getting Started with Git and GitHub
 
-
-This repository contains the code and projects completed as part of the **Third Course** in the [IBM Full Stack JavaScript Developer Professional Certificate](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer) specialization on Coursera.
+It contains the code and projects completed as part of the **Third Course** in the [IBM Full Stack JavaScript Developer Professional Certificate](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer) specialization on Coursera.
 
 ## About the Course
 
