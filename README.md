@@ -1,6 +1,6 @@
 # IBM MERN Stack Developer Specialization
 
-Welcome to the official repository for my **IBM MERN Stack Developer Specialization** certification. This repository will document my entire journey through the specialization, including the course outlines, certificates, and the featured projects I create throughout the program.
+Welcome to the official repository for my [IBM MERN Stack Developer Specialization](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer) certification from <a href="https://coursera.org" target="_blank">Coursera</a>. This repository will document my entire journey through the specialization, including the course outlines, certificates, and the featured projects I create throughout the program.
 
 ## Overview
 
@@ -26,5 +26,5 @@ Upon successful completion of each course, I will receive a certificate from **I
 To explore this repository, simply clone it to your local machine:
 
 ```bash
-git clone https://github.com/haqdad-khan/ibm-mern-stack-dev.git
+git clone https://github.com/haqdadkhan/ibm-mern-stack-dev.git
 cd ibm-mern-stack-dev

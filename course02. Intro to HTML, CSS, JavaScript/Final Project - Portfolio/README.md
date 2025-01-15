@@ -29,11 +29,10 @@ In this portfolio, I showcase the following sections:
 You can view the project demo below:
 <img src="./Final Project - Portfolio.png">
 
-## Installation
+## Installation and Usage
 
-To run the project locally, you can clone the repository and open the `index.html` file in your browser.
+To explore this repository, simply clone it to your local machine:
 
 ```bash
-git clone https://github.com/haqdad-khan/portfolio.git
-cd portfolio
-open index.html
+git clone https://github.com/haqdadkhan/ibm-mern-stack-dev.git
+cd ibm-mern-stack-dev

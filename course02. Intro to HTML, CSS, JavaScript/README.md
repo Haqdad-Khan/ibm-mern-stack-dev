@@ -75,3 +75,11 @@ This repository contains all the mini-projects I created as part of the **[Intro
 ---
 
 Each project showcases practical skills in HTML, CSS, and JavaScript, forming a strong foundation for full-stack development.
+
+## Installation and Usage
+
+To explore this repository, simply clone it to your local machine:
+
+```bash
+git clone https://github.com/haqdadkhan/ibm-mern-stack-dev.git
+cd ibm-mern-stack-dev
