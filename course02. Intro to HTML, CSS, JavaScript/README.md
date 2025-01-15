@@ -12,9 +12,9 @@ This repository contains all the mini-projects I created as part of the **[Intro
 - **Description:** This project demonstrates responsive design techniques using Tailwind CSS.
 - **Preview:**
 
-![Responsive Design Preview 1](01.responsiveDesignInTailwind1.png)
+![Responsive Design Preview 1](./01.%20responsiveDesignInTailwind1.png)
 
-![Responsive Design Preview 2](01.responsiveDesignInTailwind2.png)
+![Responsive Design Preview 2](./01.%20responsiveDesignInTailwind2.png)
 
 ---
 
