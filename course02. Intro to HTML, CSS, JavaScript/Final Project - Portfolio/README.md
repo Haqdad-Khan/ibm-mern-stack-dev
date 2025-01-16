@@ -1,6 +1,6 @@
 # Haqdad Khan - Portfolio
 
-This is the portfolio website for Haqdad Khan, a Front-End Developer with a focus on HTML, CSS, JavaScript, and modern web design frameworks. The website was created as the final project for the **[Introduction to HTML, CSS, and JavaScript](https://www.coursera.org/learn/introduction-html-css-javascript)** course, which is part of the **[IBM Full Stack Developer - Specialization](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer)**. The project aims to demonstrate my skills in creating a fully functional and responsive web portfolio using fundamental web technologies and modern tools like **Tailwind CSS** and **JavaScript**.
+This is the portfolio website for Haqdad Khan, a Front-End Developer with a focus on HTML, CSS, JavaScript, and modern web design frameworks. The website was created as the final project for the <a href="https://www.coursera.org/learn/introduction-html-css-javascript" target="_blank">Introduction to HTML, CSS, and JavaScript</a> course, which is part of the <a href="https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer" target="_blank">IBM Full-Stack JavaScript Developer Professional Certificate</a>. The project aims to demonstrate my skills in creating a fully functional and responsive web portfolio using fundamental web technologies and modern tools like **Tailwind CSS** and **JavaScript**.
 
 ## Project Overview
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theatre Seating Plan</title>
+    <!-- Add Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="h-screen flex flex-col justify-center items-center bg-gray-100">
+
+    <div class="grid grid-cols-3 gap-4 justify-center items-center mb-4">
+        <div id="A1" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('A1')">
+            A1</div>
+        <div id="A2" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('A2')">
+            A2</div>
+        <div id="A3" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('A3')">
+            A3</div>
+        <div id="B1" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('B1')">
+            B1</div>
+        <div id="B2" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('B2')">
+            B2</div>
+        <div id="B3" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('B3')">
+            B3</div>
+        <div id="C1" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('C1')">
+            C1</div>
+        <div id="C2" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('C2')">
+            C2</div>
+        <div id="C3" class="seat available bg-green-400 text-center py-2 px-3 cursor-pointer" onclick="bookSeat('C3')">
+            C3</div>
+    </div>
+
+    <button class="mt-4 py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+        onclick="selectRandomSeat()">Select Random</button>
+
+    <!-- Javascript -->
+    <script>
+        const seats = {
+            A1: { id: 'A1', booked: false },
+            A2: { id: 'A2', booked: false },
+            A3: { id: 'A3', booked: false },
+            B1: { id: 'B1', booked: false },
+            B2: { id: 'B2', booked: false },
+            B3: { id: 'B3', booked: false },
+            C1: { id: 'C1', booked: false },
+            C2: { id: 'C2', booked: false },
+            C3: { id: 'C3', booked: false }
+        };
+
+        // Function to book a seat
+        function bookSeat(seatId) {
+            const seat = seats[seatId];
+
+            if (seat.booked) {
+                alert(`Sorry, ${seatId} is already booked!`);
+                return;
+            }
+
+            // Mark the seat as booked
+            seat.booked = true;
+
+            // Update the seat color to indicate booking
+            document.getElementById(seatId).classList.remove('bg-green-400');
+            document.getElementById(seatId).classList.add('bg-red-500', 'cursor-not-allowed');
+            document.getElementById(seatId).innerText = `${seatId} (Booked)`;
+
+            // Alert the user that the seat has been booked
+            alert(`${seatId} has been successfully booked!`);
+        }
+
+        // Function to select a random available seat
+        function selectRandomSeat() {
+            const availableSeats = Object.keys(seats).filter(seatId => !seats[seatId].booked);
+
+            if (availableSeats.length === 0) {
+                alert("No available seats left.");
+                return;
+            }
+
+            const randomSeatId = availableSeats[Math.floor(Math.random() * availableSeats.length)];
+
+            // Book the randomly selected seat
+            bookSeat(randomSeatId);
+        }
+    </script>
+</body>
+
+</html>

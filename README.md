@@ -1,10 +1,12 @@
-# IBM MERN Stack Developer Specialization
+# IBM Full-Stack JavaScript Developer Professional Certificate
 
-Welcome to the official repository for my [IBM MERN Stack Developer Specialization](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer) certification from <a href="https://coursera.org" target="_blank">Coursera</a>. This repository will document my entire journey through the specialization, including the course outlines, certificates, and the featured projects I create throughout the program.
+Welcome to the official repository for my <a href="" target="_blank"></a>[IBM Full-Stack JavaScript Developer Professional Certificate](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer) on <a href="https://coursera.org" target="_blank">Coursera</a>.
+
+This repository will document my entire journey through the specialization, including the course outlines, certificates, and the featured projects I create throughout the program.
 
 ## Overview
 
-The **IBM MERN Stack Developer Specialization** is an in-depth learning path that will equip me with the necessary skills and knowledge to become proficient in developing full-stack web applications using the **MERN stack** (MongoDB, Express.js, React.js, and Node.js). And **DevOps & Cloud Native** tools and technologies (Containerization w/ Docker, Kubernetes, OpenShift, Microservices & Agile, Scrum etc).
+The **IBM Full-Stack JavaScript Developer Professional Certificate** is an in-depth learning path that will equip me with the necessary skills and knowledge to become proficient in developing full-stack web applications using the **MERN stack** (MongoDB, Express.js, React.js, and Node.js). And **DevOps & Cloud Native** tools and technologies (Containerization w/ Docker, Kubernetes, OpenShift, Microservices & Agile, Scrum etc).
 
 This repository will serve as a central hub to track my progress, showcase projects, and house all relevant materials and certificates related to the specialization.
 

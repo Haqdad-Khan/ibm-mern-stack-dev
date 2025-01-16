@@ -1,6 +1,6 @@
-# Mini-Projects from [Introduction to HTML, CSS, and JavaScript](https://www.coursera.org/learn/introduction-html-css-javascript)
+# course02: Introduction to HTML, CSS, and JavaScript
 
-This repository contains all the mini-projects I created as part of the **[Introduction to HTML, CSS, and JavaScript](https://www.coursera.org/learn/introduction-html-css-javascript)** course. The course is part of the **[IBM Full Stack Developer - Specialization](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer)**.
+It contains all the mini-projects I created as part of the <a href="https://www.coursera.org/learn/introduction-html-css-javascript" target="_blank">Introduction to HTML, CSS, and JavaScript</a> course. The course is part of the <a href="https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer" target="_blank">IBM Full-Stack JavaScript Developer Professional Certificate</a> on <a href="https://coursera.org" target="_blank">Coursera</a>.
 
 ## Projects Overview
 

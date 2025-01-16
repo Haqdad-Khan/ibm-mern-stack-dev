@@ -1,6 +1,6 @@
 # JavaScript Programming Essentials
 
-It contains the code and projects completed as part of the **Fourth Course** course in the [IBM Full Stack JavaScript Developer Professional Certificate](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer) specialization on Coursera.
+It contains the code and projects completed as part of the <a href="https://www.coursera.org/learn/javascript-programming-essentials?specialization=ibm-full-stack-javascript-developer" target="_blank">JavaScript Programming Essentials</a> course. The course is part of the <a href="https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer" target="_blank">IBM Full-Stack JavaScript Developer Professional Certificate</a> on <a href="https://coursera.org" target="_blank">Coursera</a>.
 
 ## About the Course
 
@@ -8,7 +8,7 @@ This course provides an introduction to the foundational concepts of programming
 
 ### Key Topics Covered:
 - **Data Types and Variables**
-  - Primitive types (string, number, boolean, null, undefined)
+  - Primitive types (string, number, boolean, null, undefined, symbol, bigint)
   - Declaring variables using `var`, `let`, and `const`
   - Type conversion and type coercion
 

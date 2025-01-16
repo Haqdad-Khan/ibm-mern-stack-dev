@@ -1,10 +1,10 @@
-# Getting Started with Git and GitHub
+# course03: Getting Started with Git and GitHub
 
-It contains the code and projects completed as part of the **Third Course** in the [IBM Full Stack JavaScript Developer Professional Certificate](https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer) specialization on Coursera.
+It contains the resources that are part of the <a href="" target="_blank"></a>[Intro to Git and GitHub](https://www.coursera.org/learn/getting-started-with-git-and-github?specialization=ibm-full-stack-javascript-developer) course. The course is part of the <a href="https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer" target="_blank">IBM Full-Stack JavaScript Developer Professional Certificate</a> on <a href="https://coursera.org" target="_blank">Coursera</a>.
 
 ## About the Course
 
-This course is a part of the **IBM MERN Stack Developer Professional Certificate**, which aims to provide learners with the skills needed to become proficient in full-stack web development using the MERN (MongoDB, Express.js, React, Node.js) stack. The third course focuses on practical development and the integration of tools like Git and GitHub for version control.
+This course is a part of the **IBM Full-Stack JavaScript Developer Professional Certificate**, which aims to provide learners with the skills needed to become proficient in full-stack web development using the MERN (MongoDB, Express.js, React, Node.js) stack. The third course focuses on practical development and the integration of tools like Git and GitHub for version control.
 
 ### Key Topics Covered:
 - **Version Control with Git and GitHub**
